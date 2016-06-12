@@ -85,8 +85,8 @@ public class FlappyScript : MonoBehaviour
         //just jump up and down on intro screen
         if (GameStateManager.GameState == GameState.Intro)
         {
-            if (rigidbody2D.velocity.y < -1) //when the speed drops, give a boost
-                rigidbody2D.AddForce(new Vector2(0, rigidbody2D.mass * 5500 * Time.deltaTime)); //lots of play and stop 
+            if (GetComponent<Rigidbody2D>().velocity.y < -1) //when the speed drops, give a boost
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(0, GetComponent<Rigidbody2D>().mass * 5500 * Time.deltaTime)); //lots of play and stop 
                                                         //and play and stop etc to find this value, feel free to modify
         }
         else if (GameStateManager.GameState == GameState.Playing || GameStateManager.GameState == GameState.Dead)
@@ -111,8 +111,8 @@ public class FlappyScript : MonoBehaviour
 
     void BoostOnYAxis()
     {
-        rigidbody2D.velocity = new Vector2(0, VelocityPerJump);
-        audio.PlayOneShot(FlyAudioClip);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, VelocityPerJump);
+        GetComponent<AudioSource>().PlayOneShot(FlyAudioClip);
     }
 
 
@@ -122,7 +122,7 @@ public class FlappyScript : MonoBehaviour
     /// </summary>
     private void FixFlappyRotation()
     {
-        if (rigidbody2D.velocity.y > 0) flappyYAxisTravelState = FlappyYAxisTravelState.GoingUp;
+        if (GetComponent<Rigidbody2D>().velocity.y > 0) flappyYAxisTravelState = FlappyYAxisTravelState.GoingUp;
         else flappyYAxisTravelState = FlappyYAxisTravelState.GoingDown;
 
         float degreesToAdd = 0;
@@ -155,7 +155,7 @@ public class FlappyScript : MonoBehaviour
         {
             if (col.gameObject.tag == "Pipeblank") //pipeblank is an empty gameobject with a collider between the two pipes
             {
-                audio.PlayOneShot(ScoredAudioClip);
+                GetComponent<AudioSource>().PlayOneShot(ScoredAudioClip);
                 ScoreManagerScript.Score++;
             }
             else if (col.gameObject.tag == "Pipe")
@@ -180,7 +180,7 @@ public class FlappyScript : MonoBehaviour
     {
         GameStateManager.GameState = GameState.Dead;
         DeathGUI.SetActive(true);
-        audio.PlayOneShot(DeathAudioClip);
+        GetComponent<AudioSource>().PlayOneShot(DeathAudioClip);
     }
 
 }
