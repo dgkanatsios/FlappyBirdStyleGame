@@ -7,3 +7,7 @@
 Source code for a Flappy Bird style game built in Unity game engine. You can check the blog post explaining its creation [here](http://dgkanatsios.com/2014/07/02/a-flappy-bird-clone-in-unity-source-code-included-3/) and you can play the game [here](http://unitysamples.azurewebsites.net/flappybirdclone.html)
 
 It has been tested and developed on Unity 5.6.
+
+### Assets sources
+Sprites: https://www.spriters-resource.com/mobile/flappybird/sheet/59894/
+Sounds: https://www.youtube.com/watch?v=6O2cbPAYxFs 
