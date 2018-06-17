@@ -10,4 +10,4 @@ It has been tested and developed on Unity 5.6.
 
 ### Assets sources
 Sprites: https://www.spriters-resource.com/mobile/flappybird/sheet/59894/
-Sounds: https://www.youtube.com/watch?v=6O2cbPAYxFs 
+Sounds: https://www.sounds-resource.com/mobile/flappybird/sound/5309/
