@@ -3,7 +3,7 @@ using System.Collections;
 
 /// <summary>
 /// Spritesheet for Flappy Bird found here: http://www.spriters-resource.com/mobile_phone/flappybird/sheet/59537/
-/// Audio for Flappy Bird found here: https://www.youtube.com/watch?v=xY0sZUJWwA8
+/// Audio for Flappy Bird found here: https://www.sounds-resource.com/mobile/flappybird/sound/5309/
 /// </summary>
 public class FlappyScript : MonoBehaviour
 {
