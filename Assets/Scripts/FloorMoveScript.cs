@@ -13,6 +13,9 @@ public class FloorMoveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameStateManager.GameState == GameState.Dead)
+            return;
+    
         if (transform.localPosition.x < -3.9f)
         {
             transform.localPosition = new Vector3(0, transform.localPosition.y, transform.localPosition.z);
