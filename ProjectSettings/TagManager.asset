@@ -17,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - VP
   - 
   - 
   - 
@@ -47,4 +47,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: VP
+    uniqueID: 1804688513
     locked: 0
